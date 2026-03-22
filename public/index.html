@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CM Pisos — Distribuidor de Pisos e Carpetes</title>
+  <meta name="description" content="Distribuidor oficial Belgotex. Carpetes residenciais, modulares e pisos vinílicos com proteção antibacteriana. Enviamos para todo o Brasil.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="preload" href="/images/hero-bg.jpg" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="#" class="navbar__logo"><strong>CM</strong> PISOS</a>
+      <div class="navbar__links">
+        <a href="#ambientes">Ambientes</a>
+        <a href="#novidades">Novidades</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#faqs">FAQs</a>
+        <a href="#contato">Contato</a>
+      </div>
+      <button class="navbar__toggle" aria-label="Menu" id="navToggle">
+        <svg viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="navbar__mobile" id="navMobile">
+      <a href="#ambientes">Ambientes</a>
+      <a href="#novidades">Novidades</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#diferenciais">Diferenciais</a>
+      <a href="#faqs">FAQs</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <div class="hero__header">
+        <span class="hero__eyebrow">Distribuidor de pisos e carpetes</span>
+        <h1 class="hero__title">
+          Soluções em pisos e <span class="hero__italic">carpetes</span><br>para seu projeto
+        </h1>
+      </div>
+      <!-- Trust badges -->
+      <div class="hero__trust">
+        <div class="hero__trust-item">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          <span>Entregamos para todo o Brasil</span>
+        </div>
+        <div class="hero__trust-item">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Proteção antibacteriana certificada</span>
+        </div>
+      </div>
+      <div class="hero__ctas">
+        <button class="btn btn--white" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">Solicitar orçamento</button>
+        <button class="btn btn--outline" onclick="document.getElementById('catalogo').scrollIntoView({behavior:'smooth'})">Ver produtos →</button>
+      </div>
+      <div class="hero__bottom">
+        <div class="hero__stats">
+          <div class="hero-stat">
+            <span class="hero-stat__num" data-count="30">0+</span>
+            <span class="hero-stat__text">Anos de experiência</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat__num" data-count="500">0+</span>
+            <span class="hero-stat__text">Projetos atendidos</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat__num" data-count="100">0%</span>
+            <span class="hero-stat__text">% Satisfação</span>
+          </div>
+        </div>
+        <a href="https://www.instagram.com/cmpiso/" target="_blank" rel="noopener noreferrer" class="hero__insta" aria-label="Instagram CM Pisos">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== AMBIENTES ========== -->
+  <section id="ambientes" class="how">
+    <div class="container">
+      <div class="environments reveal">
+        <div class="environments__label">
+          <p>Soluções para</p>
+          <strong>todos os<br>ambientes<span>_</span></strong>
+        </div>
+        <button class="env-btn env-btn--prev" aria-label="Anterior" id="envPrev">
+          <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="env-list" id="envList">
+          <button class="env-item" onclick="filterByEnvironment('casa')">
+            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <span>Casa</span>
+            <span class="env-count">12</span>
+          </button>
+          <button class="env-item" onclick="filterByEnvironment('comercio')">
+            <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            <span>Comércio</span>
+            <span class="env-count">18</span>
+          </button>
+          <button class="env-item" onclick="filterByEnvironment('escritorio')">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <span>Escritório</span>
+            <span class="env-count">15</span>
+          </button>
+          <button class="env-item" onclick="filterByEnvironment('jardim')">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            <span>Jardim</span>
+            <span class="env-count">8</span>
+          </button>
+          <button class="env-item" onclick="filterByEnvironment('hotel')">
+            <svg viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16"/><path d="M1 21h22"/><path d="M9 7h1"/><path d="M9 11h1"/><path d="M14 7h1"/><path d="M14 11h1"/><rect x="9" y="15" width="6" height="6"/></svg>
+            <span>Hotel</span>
+            <span class="env-count">10</span>
+          </button>
+          <button class="env-item" onclick="filterByEnvironment('hospital')">
+            <svg viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16"/><path d="M1 21h22"/><line x1="12" y1="9" x2="12" y2="15"/><line x1="9" y1="12" x2="15" y2="12"/></svg>
+            <span>Hospital</span>
+            <span class="env-count">9</span>
+          </button>
+          <button class="env-item" onclick="filterByEnvironment('escola')">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+            <span>Escola</span>
+            <span class="env-count">11</span>
+          </button>
+          <button class="env-item" onclick="filterByEnvironment('banco')">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
+            <span>Banco</span>
+            <span class="env-count">7</span>
+          </button>
+        </div>
+        <button class="env-btn env-btn--next" aria-label="Próximo" id="envNext">
+          <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== NOVIDADES ========== -->
+  <section id="novidades" class="novidades">
+    <div class="container">
+      <div class="novidades__title-wrap">
+        <h2 class="novidades__title reveal">Novidades</h2>
+      </div>
+      <div class="novidades__grid">
+
+        <div class="novidades__card reveal d1">
+          <div class="novidades__card-img">
+            <img src="/images/products/interlude.jpg" alt="Interlude" loading="lazy">
+            <div class="novidades__colors"><div class="color-palette">
+              <div class="color-dot" style="background:#6B7062"></div>
+              <div class="color-dot" style="background:#B4B09C"></div>
+              <div class="color-dot" style="background:#9E9A84"></div>
+              <div class="color-dot" style="background:#8B8673"></div>
+              <div class="color-dot" style="background:#7A7563"></div>
+            </div></div>
+            <div class="novidades__badges"><span class="badge badge--dark">NOVO</span></div>
+          </div>
+          <h3 class="novidades__card-name">Interlude</h3>
+          <p class="novidades__card-sub">design inovador</p>
+        </div>
+
+        <div class="novidades__card reveal d2">
+          <div class="novidades__card-img">
+            <img src="/images/products/layout.jpg" alt="Layout" loading="lazy">
+            <div class="novidades__colors"><div class="color-palette">
+              <div class="color-dot" style="background:#8B8B8B"></div>
+              <div class="color-dot" style="background:#D4CCC4"></div>
+              <div class="color-dot" style="background:#A19E94"></div>
+              <div class="color-dot" style="background:#C4B5A0"></div>
+              <div class="color-dot" style="background:#7A7A7A"></div>
+            </div></div>
+            <div class="novidades__badges">
+              <span class="badge badge--dark">NOVO</span>
+              <span class="badge badge--light">NOVAS CORES</span>
+            </div>
+          </div>
+          <h3 class="novidades__card-name">Layout</h3>
+          <p class="novidades__card-sub">dividindo espaços — conectando pessoas</p>
+        </div>
+
+        <div class="novidades__card reveal d3">
+          <div class="novidades__card-img">
+            <img src="/images/products/metropolis.jpg" alt="Metrópolis" loading="lazy">
+            <div class="novidades__colors"><div class="color-palette">
+              <div class="color-dot" style="background:#1B3A6B"></div>
+              <div class="color-dot" style="background:#3A3A3A"></div>
+              <div class="color-dot" style="background:#9E9E9E"></div>
+              <div class="color-dot" style="background:#C4A48A"></div>
+              <div class="color-dot" style="background:#6B5449"></div>
+            </div></div>
+            <div class="novidades__badges"><span class="badge badge--dark">NOVO</span></div>
+          </div>
+          <h3 class="novidades__card-name">Metrópolis</h3>
+          <p class="novidades__card-sub">icônico dinamismo</p>
+        </div>
+
+        <div class="novidades__card reveal d4">
+          <div class="novidades__card-img">
+            <img src="/images/products/metropolis-transitions.jpg" alt="Metrópolis Transitions" loading="lazy">
+            <div class="novidades__colors"><div class="color-palette">
+              <div class="color-dot" style="background:#7B6B5E"></div>
+              <div class="color-dot" style="background:#4A4A4A"></div>
+              <div class="color-dot" style="background:#B4A393"></div>
+              <div class="color-dot" style="background:#8B6F55"></div>
+              <div class="color-dot" style="background:#A85F3C"></div>
+            </div></div>
+            <div class="novidades__badges"><span class="badge badge--dark">NOVO</span></div>
+          </div>
+          <h3 class="novidades__card-name">Metrópolis Transitions</h3>
+          <p class="novidades__card-sub">uma ode em cores</p>
+        </div>
+
+        <div class="novidades__card reveal d5">
+          <div class="novidades__card-img">
+            <img src="/images/products/tango.jpg" alt="Tango" loading="lazy">
+            <div class="novidades__colors"><div class="color-palette">
+              <div class="color-dot" style="background:#8B7062"></div>
+              <div class="color-dot" style="background:#C4A882"></div>
+              <div class="color-dot" style="background:#6B5040"></div>
+            </div></div>
+            <div class="novidades__badges"><span class="badge badge--dark">NOVO</span></div>
+          </div>
+          <h3 class="novidades__card-name">Tango</h3>
+          <p class="novidades__card-sub">elegância e conforto em harmonia</p>
+        </div>
+
+        <div class="novidades__card reveal d6">
+          <div class="novidades__card-img">
+            <img src="/images/products/disco.jpg" alt="Disco" loading="lazy">
+            <div class="novidades__colors"><div class="color-palette">
+              <div class="color-dot" style="background:#7B9C54"></div>
+              <div class="color-dot" style="background:#A8C47A"></div>
+              <div class="color-dot" style="background:#5A7240"></div>
+            </div></div>
+            <div class="novidades__badges"><span class="badge badge--dark">NOVO</span></div>
+          </div>
+          <h3 class="novidades__card-name">Disco</h3>
+          <p class="novidades__card-sub">expressão e luxo</p>
+        </div>
+
+        <div class="novidades__card reveal d7">
+          <div class="novidades__card-img">
+            <img src="/images/products/soft-sense.jpg" alt="Soft Sense" loading="lazy">
+            <div class="novidades__colors"><div class="color-palette">
+              <div class="color-dot" style="background:#A8A8A8"></div>
+              <div class="color-dot" style="background:#B4A89C"></div>
+              <div class="color-dot" style="background:#8B8B8B"></div>
+              <div class="color-dot" style="background:#D4C8BC"></div>
+            </div></div>
+            <div class="novidades__badges"><span class="badge badge--dark">NOVO</span></div>
+          </div>
+          <h3 class="novidades__card-name">Soft Sense</h3>
+          <p class="novidades__card-sub">a escolha inteligente e sustentável</p>
+        </div>
+
+        <div class="novidades__card reveal d8">
+          <div class="novidades__card-img">
+            <img src="/images/products/newcast.jpg" alt="Newcast" loading="lazy">
+            <div class="novidades__colors"><div class="color-palette">
+              <div class="color-dot" style="background:#B49F7E"></div>
+              <div class="color-dot" style="background:#A89475"></div>
+              <div class="color-dot" style="background:#9A8668"></div>
+              <div class="color-dot" style="background:#8B7C5F"></div>
+            </div></div>
+            <div class="novidades__badges"><span class="badge badge--dark">NOVO</span></div>
+          </div>
+          <h3 class="novidades__card-name">Newcast</h3>
+          <p class="novidades__card-sub">modernidade e conforto</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CATÁLOGO ========== -->
+  <section id="catalogo" class="catalogo">
+    <div class="container">
+      <div class="catalogo__layout">
+        <aside class="catalogo__sidebar">
+          <div class="catalogo__search">
+            <input type="text" placeholder="Buscar..." id="searchInput" aria-label="Buscar produto">
+          </div>
+          <div class="filtro-grupo">
+            <h4 class="filtro-titulo">Uso</h4>
+            <label class="filtro-item"><input type="radio" name="uso" value="banco"> Banco</label>
+            <label class="filtro-item"><input type="radio" name="uso" value="casa"> Casa</label>
+            <label class="filtro-item"><input type="radio" name="uso" value="comercio"> Comércio</label>
+            <label class="filtro-item"><input type="radio" name="uso" value="escola"> Escola</label>
+            <label class="filtro-item"><input type="radio" name="uso" value="escritorio"> Escritório</label>
+            <label class="filtro-item"><input type="radio" name="uso" value="hospital"> Hospital</label>
+            <label class="filtro-item"><input type="radio" name="uso" value="hotel"> Hotel</label>
+            <label class="filtro-item"><input type="radio" name="uso" value="jardim"> Jardim</label>
+          </div>
+          <div class="filtro-grupo">
+            <h4 class="filtro-titulo">Tipo</h4>
+            <label class="filtro-item"><input type="radio" name="tipo" value="carpete-modular"> Carpete modular <span class="filtro-count">19</span></label>
+            <label class="filtro-item"><input type="radio" name="tipo" value="carpete-comercial"> Carpetes comerciais <span class="filtro-count">13</span></label>
+            <label class="filtro-item"><input type="radio" name="tipo" value="carpete-residencial"> Carpetes residenciais <span class="filtro-count">9</span></label>
+            <label class="filtro-item"><input type="radio" name="tipo" value="grama-sintetica"> Gramas sintéticas <span class="filtro-count">4</span></label>
+            <label class="filtro-item"><input type="radio" name="tipo" value="piso-vinilico-manta"> Pisos vinílicos em manta <span class="filtro-count">8</span></label>
+            <label class="filtro-item"><input type="radio" name="tipo" value="piso-vinilico"> Pisos vinílicos <span class="filtro-count">14</span></label>
+          </div>
+          <div class="filtro-acoes">
+            <button class="filtro-aplicar" id="btnAplicar">APLICAR FILTROS</button>
+            <button class="filtro-limpar" id="btnLimpar">LIMPAR FILTROS</button>
+          </div>
+        </aside>
+
+        <main class="catalogo__main">
+          <div class="catalogo__header">
+            <div class="catalogo__resultados">
+              <svg viewBox="0 0 24 24" width="18" height="18"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+              <span>Mostrando <strong id="countFrom">0</strong>–<strong id="countTo">0</strong> de <strong id="countTotal">0</strong> resultados</span>
+            </div>
+            <div class="catalogo__header-right">
+              <div class="catalogo__per-page">
+                <label for="perPage">Mostrar:</label>
+                <select id="perPage" aria-label="Resultados por página">
+                  <option value="12">12</option>
+                  <option value="24">24</option>
+                  <option value="48">48</option>
+                  <option value="66">Todos</option>
+                </select>
+              </div>
+              <div class="catalogo__ordenar">
+                <select id="ordenar" aria-label="Ordenar por">
+                  <option value="lancamento">Data de lançamento</option>
+                  <option value="nome-az">Nome A–Z</option>
+                  <option value="nome-za">Nome Z–A</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="catalogo__grid" id="catalogoGrid"></div>
+          <div class="catalogo__pagination" id="paginacao"></div>
+        </main>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DIFERENCIAIS ========== -->
+  <section id="diferenciais" class="differentials">
+    <div class="container">
+      <div class="differentials__header reveal">
+        <span class="section-eyebrow">Por que nos escolher</span>
+        <h2 class="section-title white">Nossos <em class="serif">diferenciais</em></h2>
+      </div>
+      <div class="differentials__grid">
+        <div class="diff-card reveal d1">
+          <div class="diff-card__top"><span class="diff-card__num">01</span><div class="diff-card__check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div></div>
+          <h3 class="diff-card__title">Orientação Técnica</h3>
+          <p class="diff-card__desc">Ajudamos você a escolher o piso ideal para cada ambiente e necessidade.</p>
+        </div>
+        <div class="diff-card reveal d2">
+          <div class="diff-card__top"><span class="diff-card__num">02</span><div class="diff-card__check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div></div>
+          <h3 class="diff-card__title">Qualidade Comprovada</h3>
+          <p class="diff-card__desc">Trabalhamos apenas com as melhores marcas e produtos certificados.</p>
+        </div>
+        <div class="diff-card reveal d3">
+          <div class="diff-card__top"><span class="diff-card__num">03</span><div class="diff-card__check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div></div>
+          <h3 class="diff-card__title">Atendimento Humanizado</h3>
+          <p class="diff-card__desc">Relacionamento próximo e suporte em todas as etapas do projeto.</p>
+        </div>
+        <div class="diff-card reveal d4">
+          <div class="diff-card__top"><span class="diff-card__num">04</span><div class="diff-card__check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div></div>
+          <h3 class="diff-card__title">Entrega para Todo o Brasil</h3>
+          <p class="diff-card__desc">Logística eficiente com entrega rápida em todos os estados do país.</p>
+        </div>
+        <div class="diff-card reveal d5">
+          <div class="diff-card__top"><span class="diff-card__num">05</span><div class="diff-card__check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div></div>
+          <h3 class="diff-card__title">Proteção Antibacteriana</h3>
+          <p class="diff-card__desc">Produtos com tratamento antibacteriano certificado para maior higiene e segurança.</p>
+        </div>
+        <div class="diff-card reveal d6">
+          <div class="diff-card__top"><span class="diff-card__num">06</span><div class="diff-card__check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div></div>
+          <h3 class="diff-card__title">Preços Competitivos</h3>
+          <p class="diff-card__desc">Condições especiais e orçamentos personalizados para seu projeto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQs ========== -->
+  <section id="faqs" class="faqs">
+    <div class="container">
+      <div class="faqs__header reveal">
+        <span class="section-eyebrow">Dúvidas frequentes</span>
+        <h2 class="section-title">Perguntas <em class="serif">frequentes</em></h2>
+      </div>
+      <div class="faqs__grid">
+        <div class="faq-item reveal d1">
+          <div class="faq-item__toggle" onclick="this.parentElement.classList.toggle('open')">
+            <h3 class="faq-item__title">Como funciona o orçamento?</h3>
+            <span class="faq-item__icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </div>
+          <div class="faq-item__content"><p>Realizamos orçamentos personalizados para cada projeto. Basta entrar em contato conosco com informações sobre sua necessidade e nossa equipe preparará uma proposta com valores competitivos.</p></div>
+        </div>
+        <div class="faq-item reveal d2">
+          <div class="faq-item__toggle" onclick="this.parentElement.classList.toggle('open')">
+            <h3 class="faq-item__title">Vocês entregam fora de Fortaleza?</h3>
+            <span class="faq-item__icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </div>
+          <div class="faq-item__content"><p>Sim! Entregamos para todo o Brasil. Contamos com logística eficiente para atender projetos em todos os estados, com prazo e custo de frete informados no momento do orçamento.</p></div>
+        </div>
+        <div class="faq-item reveal d3">
+          <div class="faq-item__toggle" onclick="this.parentElement.classList.toggle('open')">
+            <h3 class="faq-item__title">Os carpetes têm proteção antibacteriana?</h3>
+            <span class="faq-item__icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </div>
+          <div class="faq-item__content"><p>Sim. Trabalhamos com produtos Belgotex que possuem tratamento antibacteriano certificado, proporcionando maior higiene e proteção para sua família ou ambiente corporativo.</p></div>
+        </div>
+        <div class="faq-item reveal d4">
+          <div class="faq-item__toggle" onclick="this.parentElement.classList.toggle('open')">
+            <h3 class="faq-item__title">Qual é a durabilidade dos produtos?</h3>
+            <span class="faq-item__icon"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </div>
+          <div class="faq-item__content"><p>Nossos produtos possuem alta durabilidade pois utilizamos tecnologia de 1ª linha. A Belgotex garante resistência extrema, mantendo beleza e qualidade por muitos anos de uso intenso.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTATO ========== -->
+  <section id="contato" class="contact">
+    <div class="container">
+      <div class="contact__header reveal">
+        <span class="section-eyebrow">Fale conosco</span>
+        <h2 class="section-title">Solicite um <em class="serif">orçamento</em></h2>
+      </div>
+      <div class="contact__grid">
+        <div class="form-card reveal-left">
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Nome <span class="req">*</span></label>
+                <input type="text" name="nome" placeholder="Seu nome" required>
+              </div>
+              <div class="form-group">
+                <label>Telefone <span class="req">*</span></label>
+                <input type="tel" name="tel" placeholder="(11) 99999-9999" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>E-mail <span class="req">*</span></label>
+              <input type="email" name="email" placeholder="seu@email.com" required>
+            </div>
+            <div class="form-group">
+              <label>Produto de interesse</label>
+              <select name="produto">
+                <option value="">Selecione um produto</option>
+                <option value="Carpete Modular">Carpete Modular</option>
+                <option value="Carpete Residencial">Carpete Residencial</option>
+                <option value="Piso Vinílico">Piso Vinílico</option>
+                <option value="Grama Sintética">Grama Sintética</option>
+                <option value="Outro">Outro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Mensagem</label>
+              <textarea name="mensagem" rows="4" placeholder="Descreva seu projeto ou dúvida..."></textarea>
+            </div>
+            <button type="submit" class="form-submit">Enviar mensagem</button>
+          </form>
+        </div>
+        <div class="reveal-right">
+          <h3 class="contact-info__title">Outras formas de contato</h3>
+          <div class="contact-items">
+            <a href="tel:+5585988380770" class="contact-item">
+              <div class="contact-item__icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 16.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.44 6h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+              <div><span class="contact-item__val">(85) 98838-0770</span><span class="contact-item__sub">Seg a Sex, 8h às 18h</span></div>
+            </a>
+            <a href="mailto:cm.comercialmarcos@gmail.com" class="contact-item">
+              <div class="contact-item__icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+              <div><span class="contact-item__val">cm.comercialmarcos@gmail.com</span><span class="contact-item__sub">Resposta em até 24h</span></div>
+            </a>
+            <div class="contact-item">
+              <div class="contact-item__icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+              <div><span class="contact-item__val">Avenida Coletora A, 340</span><span class="contact-item__sub">Parque Santana, Mondubim, Fortaleza, CE 60768-010</span></div>
+            </div>
+          </div>
+          <div class="wa-cta">
+            <div class="wa-cta__inner">
+              <div class="wa-cta__left">
+                <svg class="wa-cta__icon" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                <div>
+                  <p class="wa-cta__title">Prefere WhatsApp?</p>
+                  <p class="wa-cta__desc">Resposta rápida e atendimento personalizado</p>
+                </div>
+              </div>
+              <a href="https://wa.me/5585988380770?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento!" target="_blank" class="btn btn--wa">Iniciar conversa</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand-logo"><strong>CM</strong> PISOS</p>
+          <p class="footer__brand-desc">Distribuidor oficial Belgotex. Soluções em pisos e carpetes com proteção antibacteriana e entrega para todo o Brasil.</p>
+          <p class="footer__cnpj">CNPJ: 01.354.038/0001-25</p>
+        </div>
+        <div>
+          <h4 class="footer__heading">Navegação</h4>
+          <nav class="footer__nav"><a href="#novidades">Novidades</a><a href="#ambientes">Ambientes</a><a href="#catalogo">Catálogo</a><a href="#diferenciais">Diferenciais</a><a href="#faqs">FAQs</a></nav>
+        </div>
+        <div>
+          <h4 class="footer__heading">Produtos</h4>
+          <nav class="footer__nav"><a href="#catalogo">Carpetes Modulares</a><a href="#catalogo">Carpetes Residenciais</a><a href="#catalogo">Pisos Vinílicos</a><a href="#catalogo">Gramas Sintéticas</a></nav>
+        </div>
+        <div>
+          <h4 class="footer__heading">Contato</h4>
+          <div class="footer__contact">
+            <a href="tel:+5585988380770"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 16.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.44 6h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(85) 98838-0770</a>
+            <a href="mailto:cm.comercialmarcos@gmail.com"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>cm.comercialmarcos@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 CM Pisos. Todos os direitos reservados.</p>
+        <p>Soluções em pisos e carpetes para todos os ambientes.<br>Qualidade, variedade e atendimento personalizado.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="wa-float">
+    <a href="https://wa.me/5585988380770?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento!" target="_blank" rel="noopener noreferrer" class="wa-float__btn" aria-label="Fale conosco pelo WhatsApp">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="28" height="28" fill="currentColor">
+        <path d="M24 4C13 4 4 13 4 24c0 3.6 1 7 2.7 9.9L4 44l10.4-2.7C17.2 43 20.5 44 24 44c11 0 20-9 20-20S35 4 24 4zm0 36c-3.1 0-6-.8-8.5-2.3l-.6-.4-6.2 1.6 1.7-6-.4-.6C8.8 30.1 8 27.1 8 24c0-8.8 7.2-16 16-16s16 7.2 16 16-7.2 16-16 16zm8.8-11.9c-.5-.2-2.8-1.4-3.2-1.5-.4-.2-.7-.2-1 .2-.3.4-1.2 1.5-1.4 1.9-.3.3-.5.4-1 .1-.5-.2-2-.7-3.8-2.3-1.4-1.2-2.4-2.8-2.6-3.2-.3-.5 0-.7.2-1l.7-.8c.2-.3.3-.5.4-.8.1-.3 0-.6-.1-.8-.1-.2-1-2.5-1.4-3.4-.4-.9-.8-.8-1-.8h-.9c-.3 0-.8.1-1.2.5-.4.4-1.6 1.6-1.6 3.8s1.6 4.4 1.9 4.7c.2.3 3.2 4.9 7.7 6.8 1.1.5 1.9.7 2.6.9 1.1.3 2 .3 2.8.2.9-.1 2.8-1.1 3.2-2.2.4-1.1.4-2 .3-2.2-.2-.2-.5-.3-.9-.5z"/>
+      </svg>
+    </a>
+  </div>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
